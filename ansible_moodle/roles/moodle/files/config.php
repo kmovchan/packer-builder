@@ -6,10 +6,10 @@ $CFG = new stdClass();
 
 $CFG->dbtype    = 'mariadb';
 $CFG->dblibrary = 'native';
-$CFG->dbhost    = 'dev-rds.c511fhlo2fcr.eu-west-3.rds.amazonaws.com';
+$CFG->dbhost    = '';
 $CFG->dbname    = 'moodle';
 $CFG->dbuser    = 'root';
-$CFG->dbpass    = 'JcUqfl0fhIlvtdDy';
+$CFG->dbpass    = '';
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
@@ -18,7 +18,7 @@ $CFG->dboptions = array (
   'dbcollation' => 'utf8mb4_general_ci',
 );
 
-$CFG->wwwroot   = 'http://alb-dev-353718871.eu-west-3.elb.amazonaws.com';
+$CFG->wwwroot   = '';
 $CFG->dataroot  = '/mnt/efs/moodledata';
 $CFG->cachedir = '/mnt/efs/moodle/cache';    // requried lock, that's why on shared location
 $CFG->tempdir = '/mnt/efs/moodle/temp';
