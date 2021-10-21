@@ -8,7 +8,7 @@ ARTIFACT=$( cat out.txt |awk -F, '$0 ~/artifact,0,id/ {print $6}' )
   echo "Packer can't compile ami for moodle" && exit 1
 fi
 AMI_ID=`echo $ARTIFACT | cut -d ':' -f2`
-echo "Saving variable to variables.tf"
+echo "Saving $AMI_ID to variables.tf"
 echo 'variable "AMI_ID" { default = "'${AMI_ID}'" }' > amivar.tf
 
 echo "Copy variable.tf to S3 bucket"
